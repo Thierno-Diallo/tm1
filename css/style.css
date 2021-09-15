@@ -1,0 +1,123 @@
+/* pour utiliser des variables en css */
+:root{
+    --primary-color: #00b894;
+    --light-color: #fff;
+    --danger-color: #ff7675;
+}
+
+nav{
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+}
+ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+a{
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+li{
+    margin: 0 2rem;
+    padding: 1rem;
+    border: 2px solid var(--danger-color);
+}
+li:hover a{
+    color: var(--danger-color);
+    transition: 2s color;
+}
+.hero{
+    background-image: url('https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    height: 37.5rem;
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-container{
+    width: 50%;
+    text-align: center;
+}
+.container{
+    margin: 3rem 10%;
+}
+.container-fluid{
+    margin: 3rem 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.btn{
+    color: var(--light-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border: solid 1px transparent;
+    transition: 0.3s all;
+}
+.btn:hover{
+    background-color: transparent;
+    color: #fdcb6e;
+}
+.btn-primary{
+    background-color: var(--primary-color);
+}
+.btn-primary:hover{
+    border: solid 1px var(--primary-color);
+}
+.btn-danger{
+    background-color: var(--danger-color);
+}
+.btn-danger:hover{
+    border: solid 1px var(--danger-color);
+}
+.col{
+    width: calc(90% / 4);
+    /* height: 18.75rem; */
+    overflow: hidden;
+}
+.col img{
+    width: 100%;
+
+}
+.card{
+    border: 1px solid #aaa;
+    /* box-shadow: offset-x  */
+    box-shadow: 10px 5px 10px red;
+}
+.card img{
+    width: 100%;
+}
+.card-body{
+    padding: 20px;
+}
+.card-footer{
+    text-align: center;
+    padding: 10px;
+    
+} 
+
+/*  adaptation aux tailles des tél */
+@media screen and ( max-width:600px){
+    .col{
+        width: 100%;
+    
+    }
+    .container{
+        margin: 50px 0;
+    }
+}
+
+
+.col:nth-child(odd){
+    background-color: var(--primary-color);
+}
+.col:nth-child(even){
+    background-color: var(--danger-color);
+} 
